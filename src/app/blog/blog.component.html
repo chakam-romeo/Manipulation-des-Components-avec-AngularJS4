@@ -1,0 +1,12 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': valeurCeck > '0',
+                'list-group-item-danger': valeurCeck < '0'}">
+
+	<p class="text-right">{{ date_creation | date:'MM/dd/yyyy h:mm a'}}</p>
+	<h2> {{ titre }}</h2>
+	<p>{{ contenu }}</p>
+	<a href="#" class="btn btn-primary" (click)="onIncrement()">Love It</a>
+	&nbsp;
+	<a href="#" class="btn btn-danger" (click)="onDecrement()">Don't love It</a>
+
+</li>

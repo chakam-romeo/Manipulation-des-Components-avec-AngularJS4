@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Mis à jour : {{ lastUpdate | async | date: 'yMMMMEEEEd' | uppercase }}</h2>
+      <ul class="list-group">
+        <app-blog *ngFor='let blog of blogs' [titre]="blog.title" [contenu]="blog.content" >
+          
+        </app-blog>
+      </ul>
+      
+    </div>
+  </div>
+</div>
